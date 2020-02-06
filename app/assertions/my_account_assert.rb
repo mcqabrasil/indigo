@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
-class TestAssertion
+class MyAccountAssertion
   include Capybara::DSL
   include RSpec::Matchers
 
   def initialize
     # class initialization
+    @ma = MyAccountMethods.new
   end
 
   # Assertion methods

@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
-class TestPage
+class PLPPage
   include Capybara::DSL
 
   CONSTANT_NAME = ' '
-
 end

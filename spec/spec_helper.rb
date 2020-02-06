@@ -26,6 +26,11 @@ RSpec.configure do |config|
   config.include Capybara::DSL
 end
 
+
+Capybara.configure do |config|
+  config.app_host = "https://thoughtfull-dev.myshopify.com"
+end
+
 @browser = ENV['BROWSER']
 
 Capybara.configure do |config|
@@ -49,14 +54,14 @@ Capybara.configure do |config|
         desired_capabilities: caps
       )
     end
-    config.app_host = ' ' # URL
+    config.app_host = "https://thoughtfull-dev.myshopify.com" 
     config.default_driver = :selenium
     config.javascript_driver = :selenium
     config.default_max_wait_time = 15
   elsif
     config.default_driver = @driver
     config.javascript_driver = @driver
-    config.app_host = ' ' # URL
+    config.app_host = "https://thoughtfull-dev.myshopify.com"
     config.default_max_wait_time = 15
   end
 end
