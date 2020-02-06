@@ -1,2 +1,2 @@
-# indigo
+# Indigo
 Capybara + Rspec
